@@ -14,14 +14,18 @@ class Books {
         return totalPrice;
     }
 
+    getInfo(discountRate){
+        console.log(`
+        The book name is ${this.bookName}
+        Autor is ${this.bookAuthor}
+        Publish year is ${this.publishYear}
+        The price of the book is ${this.bookPrice}-man
+        Discountedprice of the book is ${this.getBookPrice(discountRate)}`)
+    }
+
 }
 
 const book = new Books('Death on Nile' , 'Agatha Christie' , 1937 , 6)
-const book2 = new Books('Mavi Qatarin Sirri' , 'Agatha Christie' , 1943 , 10)
+const book2 = new Books('The Mystery of the Blue Train' , 'Agatha Christie' , 1943 , 10)
 
-
-console.log(`the book name is ${book.bookName}`)
-console.log(`autor is ${book.bookAuthor}`)
-console.log(`publish year is ${book.publishYear}`)
-console.log(`the price of the book is ${book.bookPrice}-man`)
-console.log(`discountedprice of the book is ${book.getBookPrice(10)}`)
+book.getInfo(10)
